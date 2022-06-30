@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('assets/fonts/CoolveticaRg-Regular.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'ITC Busorama Bold';
+  src: url('assets/fonts/ITC Busorama Bold.otf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
 }
+
+@font-face {
+  font-family: 'Franchise';
+  src: url('assets/fonts/Franchise.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Market Deco';
+  src: url('assets/fonts/Market_Deco.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Coolvetica', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F5F5DC;
+}
+

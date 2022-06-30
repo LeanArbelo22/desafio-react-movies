@@ -1,0 +1,104 @@
+/*  HEADER */
+.header-container {
+    padding: 10px;
+}
+
+.header-container .header-image {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    user-select: none;
+}
+
+.header-image .banner {
+    border-radius: 10px;
+    width: 90%;
+    opacity: 0.94;
+}
+
+.img-container .header-image {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container .header-image .banner {
+    object-fit: cover;
+    height: 100%;
+}
+
+.header-image .header-titles {
+    position: absolute;
+    color: #A8860A;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: 90px;
+}
+
+.header-titles h2 {
+    font-family: 'ITC Busorama Bold', sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
+
+.header-titles h1 {
+    font-family: 'Franchise', sans-serif;
+    font-size: 70px;
+    margin: 0;
+    letter-spacing: 3px;
+    color: #A8860A;
+    text-shadow: 1px 2px 3px #292C02;
+}
+
+@media screen and (max-width: 1440px) {
+    .header-titles {
+        display: none;
+    }
+}
+
+/* NAVBAR */
+.header-nav {
+    max-width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav .nav-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container .nav-logo {
+    width: 15%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo .logo-img {
+    margin-top: -2px;
+    height: 55px;
+}
+
+.nav-logo h2 {
+    color: #131212D7;
+    margin-top: 10px;
+    margin-left: -12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    user-select: none;
+}

@@ -1,0 +1,139 @@
+/* HOME */
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.home .home-titles {
+    font-size: 50px;
+    color: #a8860af1;
+    margin: 0;
+    margin-top: 30px;
+    margin-left: 80px;
+    text-align: start;
+    -webkit-text-stroke: 0.1px #00000067;
+    user-select: none;
+}
+
+.home .loading-text {
+    font-size: 40px;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 85px;
+    user-select: none;
+}
+
+.home .filter-text {
+    margin-right: 80px;
+    font-size: 28px;
+    text-align: end;
+    user-select: none;
+}
+
+.wraper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* MOVIES CONTAINER */
+.movies-container {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movies-container .movies {
+    width: 90%;
+    display: flex;
+    margin-left: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* MOVIE CARD */
+.movies-container .movie-card {
+    cursor: pointer;
+    width: 181px;
+    height: 270px;
+    margin: 5px;
+    background-color: #0C0C0C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-card .poster-image {
+    width: 100%;
+    height: 100%;
+    outline: 2px solid #1d1d1dc0;
+}
+
+.movie-card:hover {
+    transform: scale(1.2);
+}
+
+.movie-card .card-text {
+    display: none;
+    width: 100%;
+    height: 96%;
+    position: absolute;
+    text-align: center;
+    background-color: #f5f5dc94;
+    color: #1D1D1D;
+    font-size: 20px;
+    font-family: 'Market Deco', sans-serif;
+    border: 2px solid #242716;
+    padding: 5px 0;
+}
+
+.card-text .card-movie-year {
+    font-size: 14px;
+}
+
+.movie-card:hover .card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SEARCH */
+.nav-search {
+    width: 300px;
+    height: 40px;
+    align-self: flex-end;
+    margin-right: 80px;
+    margin-top: 25px;
+    background-color: #F2F2F3E0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 6px;
+    border: 2px solid #4C4C4DBD;
+}
+
+.nav-search input {
+    width: 100%;
+    max-height: 40px;
+    outline: none;
+    border: none;
+    background-color: #E3E2E700;
+    font-family: 'Coolvetica';
+    font-size: 16px;
+}
+
+.nav-icon {
+    position: relative;
+    font-size: 25px;
+    min-width: 60px;
+    color: #434344D7;
+}

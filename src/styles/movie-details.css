@@ -1,0 +1,58 @@
+.movie-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-container {
+    width: 87%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-container h1 {
+    font-size: 45px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    text-align: start;
+}
+
+.movie-description {
+    display: flex;
+    flex-direction: row;
+}
+
+.movie-description .overview {
+    width: 60%;
+    font-size: 22px;
+    color: #131212ee;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+.movie-description .info {
+    align-self: center;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+.info .genres {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.genres p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.genres .genre-name {
+    font-size: 22px;
+}

@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Desafío de código React
+# Cinematics - Leandro Arbelo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Iniciar la aplicacion
+Si quieres probar la aplicación en un servidor local:
+- Abre tu terminal.
+- Posiciónate en la carpeta en donde quieras descargar el repositorio.
+- Introduce los comandos git init, y luego git clone https://github.com/LeanArbelo22/desafio-react-movies.
+- Una vez clonado el repositorio, posicionarse en la carpeta 'challenge-movies'.
+- Por último, introducir el comando npm start.
 
-In the project directory, you can run:
+## Dependencias
+Para la realización de este desafío utilice React (v18.2.0) y todos los estilos los realice con CSS.
+Las dependencias que utilice fueron:
 
-### `npm start`
+### axios
+La elegí para realizar los fetchs a las APIs.
+Decidí utilizarla ya que es con la que habitualmente lo hago, y considero que es un poco más eficiente comparado
+con la forma tradicional.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### react-icons
+La elegí para representar las estrellas de puntuación con iconos.
+Decidí utilizarla porque considero que es la más completa en cuanto a cantidad y variedad de iconos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### react-infinite-scroll-component
+La elegí para que cada vez que el usuario llegue al final de la página (las primeras 20 películas) se cargue la siguiente página (con un nuevo llamado a la API) y se sume a las anteriores.
+Decidí utilizarla porque considero que ahorra mucho tiempo y líneas de código cuando se necesita hacer un scroll 
+infinito.
 
-### `npm test`
+### react-router-dom
+La elegí para crear el enrutador de la aplicación, crear enlaces y poder acceder a los parametros de
+la ruta.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Aclaraciones
+Estoy muy contento con el resultado de mi desafío pero me gustaría aclarar algunas cosas:
+- Decidí no manejar los estados de manera global (con Redux, o en su defecto, con useContext) porque quise
+  demostrarles lo que realmente DOMINO, no porque no sepa cómo se usan, simplemente no tengo suficiente habilidad con ellos. Sé que no es una buena práctica pasar props por muchos componentes, pero creo haberlo simplificado lo suficiente.
+- No trabaje sobre las mediaquerys porque el desafío no lo pedía y quería evitar perder tiempo en ello, pero
+  a diferencia del punto anterior, trabajar con comportamientos responsive si es algo que habitualmente hago.
+- En un principio, para la realización del filtro con estrellas, utilice una dependencia llamada 
+  react-rating-stars-component, pero con ella solo se escucha el evento onChange, lo cual me imposibilitaba
+  a cumplir con el requisito de que se borrara el filtro al volver a clickear sobre la estrella ya seleccionada,
+  por esto dedicí eliminar la dependencia y hacer el componente yo mismo, tome ideas de internet para aplicar los estilos a las estrellas, pero la lógica del filtrado y el borrado del mismo la desarrolle yo.
+- El hecho de que algunos estilos estén declarados en los componentes, no es por falta de consistencia, 
+  simplemente quería demostrar que conozco diferentes formas de realizarlos, lo mismo para los componentes de
+  una línea.
+- Elimine <React.StrictMode> del archivo index.js ya que esto preventivamente hace dos llamados iniciales a la
+  API (aunque en el useEffect solo se haga uno) y duplica los primeros 20 resultados, si bien es algo que solo afecta durante el desarrollo, decidí removerlo para que no haya confusiones.
+- Para hacer la vista detallada de la pelicula, al no manejar los estados con un contexto y para evitar
+  complicar mucho el envio de props, decidi utilizar la API disponible para buscar peliculas individualmente
+  con su ID, el cual lo vincule con useParams.
