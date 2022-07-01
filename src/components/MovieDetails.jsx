@@ -42,7 +42,7 @@ function MovieDetails() {
             <div className="info">
               <div className="genres">
                 <p>Generos: </p>
-                {genres.map(genre => <p className="genre-name">{genre}</p>)}
+                {genres.map((genre, i) => <p key={genre + i} className="genre-name">{genre}</p>)}
               </div>
               <p className="vote">Calificación:   {movie.vote_average / 2} ⭐</p>
               <p className="release">Fecha de lanzamiento: {movie.release_date}</p>
