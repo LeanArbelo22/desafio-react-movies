@@ -10,6 +10,8 @@ Si quieres probar la aplicación en un servidor local:
 - Introduce los comandos git init, y luego git clone https://github.com/LeanArbelo22/desafio-react-movies.
 - Una vez clonado el repositorio, posicionarse en la carpeta 'challenge-movies'.
 - Por último, introducir el comando npm start.
+Tambien subi la aplicación a Heroku:
+[Cinematics Heroku](https://cinematics-la.herokuapp.com/)
 
 ## Dependencias
 Para la realización de este desafío utilice React (v18.2.0) y todos los estilos los realice con CSS.
